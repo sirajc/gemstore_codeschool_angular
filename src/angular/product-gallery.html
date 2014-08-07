@@ -1,0 +1,10 @@
+<div ng-show="product.images.length">
+    <div class="img-wrap">
+        <img ng-src="{{product.images[gallery.current]}}" fade-in-out="gallery.changeImage" />
+    </div>
+    <ul class="img-thumbnails clearfix">
+        <li class="small-image pull-left thumbnail" ng-repeat="image in product.images" style="cursor: pointer">
+            <img ng-src="{{image}}" ng-mouseover="gallery.setCurrent($index)"/>
+        </li>
+    </ul>
+</div>
